@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سطحة هيدروليك - خدمات نقل ورفع السيارات</title>
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="خدمات احترافية لنقل السيارات والمركبات باستخدام أحدث المعدات الهيدروليكية. متاحون 24/7 لخدمتكم في جميع أنحاء المملكة العربية السعودية.">
+    <meta name="keywords" content="سطحة, هيدروليك, نقل السيارات, رفع السيارات, صيانة, فحص دوري, تقديرات, طوارئ">
+    <meta name="author" content="سطحة هيدروليك">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="سطحة هيدروليك - خدمات نقل ورفع السيارات">
+    <meta property="og:description" content="خدمات احترافية لنقل السيارات والمركبات باستخدام أحدث المعدات الهيدروليكية">
+    <meta property="og:locale" content="ar_SA">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="سطحة هيدروليك - خدمات نقل ورفع السيارات">
+    <meta property="twitter:description" content="خدمات احترافية لنقل السيارات والمركبات باستخدام أحدث المعدات الهيدروليكية">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#1e40af">
+    <link rel="icon" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "سطحة هيدروليك",
+      "description": "خدمات احترافية لنقل السيارات والمركبات باستخدام أحدث المعدات الهيدروليكية",
+      "telephone": "+966501234567",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "SA",
+        "addressLocality": "المملكة العربية السعودية"
+      },
+      "openingHours": "Mo-Su 00:00-23:59"
+    }
+    </script>
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="تبديل الوضع المظلم">
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+    </button>
+
+    <!-- Background Pattern -->
+    <div class="background-pattern"></div>
+    
+    <main class="main-content">
+        <!-- Header Section -->
+        <header class="hero-section">
+            <div class="container">
+                <h1 class="hero-title" id="siteTitle">سطحة هيدروليك</h1>
+                <p class="hero-subtitle" id="siteSubtitle">خدمات نقل ورفع السيارات بأحدث التقنيات الهيدروليكية</p>
+                <p class="hero-description" id="siteDescription">
+                    نحن نقدم خدمات احترافية لنقل السيارات والمركبات باستخدام أحدث المعدات الهيدروليكية. 
+                    فريق متخصص متاح على مدار الساعة لخدمتكم.
+                </p>
+            </div>
+        </header>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <div class="features-grid" id="featuresGrid">
+                    <!-- Features will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section">
+            <div class="container">
+                <h2 class="section-title">خدماتنا</h2>
+                <div class="services-grid" id="servicesGrid">
+                    <!-- Services will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <h3 class="section-title">تواصل معنا</h3>
+                <div class="contact-card">
+                    <p class="working-hours" id="workingHours">متاحون 24/7</p>
+                    <p class="address" id="address">المملكة العربية السعودية</p>
+                    <div class="contact-buttons">
+                        <a href="tel:+966501234567" class="btn btn-primary" id="callBtn">
+                            📞 اتصل الآن
+                        </a>
+                        <a href="https://wa.me/966501234567" class="btn btn-whatsapp" id="whatsappBtn" target="_blank">
+                            💬 واتساب
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 <span id="footerTitle">سطحة هيدروليك</span> - جميع الحقوق محفوظة</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/966501234567" class="floating-btn whatsapp-btn" target="_blank" title="تواصل عبر الواتساب">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.89 3.495"/>
+            </svg>
+        </a>
+        <a href="tel:+966501234567" class="floating-btn phone-btn" title="اتصل بنا">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/assets/js/data.js"></script>
+    <script src="/assets/js/main.js"></script>
+    
+    <!-- Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => console.log('SW registered'))
+                    .catch(registrationError => console.log('SW registration failed'));
+            });
+        }
+    </script>
+
+    <!-- No JavaScript fallback -->
+    <noscript>
+        <style>
+            .loading { display: none; }
+            #servicesGrid::after {
+                content: "يتطلب JavaScript لعرض الخدمات. للتواصل المباشر: +966501234567";
+                display: block;
+                text-align: center;
+                padding: 2rem;
+                background: rgba(255,255,255,0.1);
+                border-radius: 8px;
+                margin: 1rem 0;
+            }
+        </style>
+    </noscript>
+</body>
+</html>
