@@ -1,0 +1,44 @@
+{
+  "short_name": "سطحة هيدروليك",
+  "name": "سطحة هيدروليك - خدمات نقل ورفع السيارات",
+  "description": "خدمات احترافية لنقل السيارات والمركبات باستخدام أحدث المعدات الهيدروليكية",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23f59e0b' d='M20 70h60l-5-20H25z'/%3E%3Cpath fill='%233b82f6' d='M15 80h70c2.76 0 5-2.24 5-5s-2.24-5-5-5H15c-2.76 0-5 2.24-5 5s2.24 5 5 5z'/%3E%3Ccircle fill='%23374151' cx='30' cy='80' r='8'/%3E%3Ccircle fill='%23374151' cx='70' cy='80' r='8'/%3E%3Cpath fill='%236b7280' d='M50 30v20M40 40h20'/%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23f59e0b' d='M20 70h60l-5-20H25z'/%3E%3Cpath fill='%233b82f6' d='M15 80h70c2.76 0 5-2.24 5-5s-2.24-5-5-5H15c-2.76 0-5 2.24-5 5s2.24 5 5 5z'/%3E%3Ccircle fill='%23374151' cx='30' cy='80' r='8'/%3E%3Ccircle fill='%23374151' cx='70' cy='80' r='8'/%3E%3Cpath fill='%236b7280' d='M50 30v20M40 40h20'/%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#1e40af",
+  "background_color": "#1e293b",
+  "orientation": "portrait-primary",
+  "dir": "rtl",
+  "lang": "ar",
+  "scope": "/",
+  "categories": ["business", "utilities", "automotive"],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 844'%3E%3Crect fill='%23gradle' width='390' height='844'/%3E%3Ctext x='195' y='422' text-anchor='middle' fill='white' font-size='24'%3Eسطحة هيدروليك%3C/text%3E%3C/svg%3E",
+      "sizes": "390x844",
+      "type": "image/svg+xml",
+      "form_factor": "narrow"
+    }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "protocol_handlers": [
+    {
+      "protocol": "tel",
+      "url": "tel:%s"
+    }
+  ]
+}
