@@ -1,0 +1,83 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+locale: 'ar'
+show_preview_links: true
+
+collections:
+  - name: "site"
+    label: "إعدادات الموقع"
+    files:
+      - file: "assets/js/data.js"
+        label: "معلومات الموقع العامة"
+        name: "site-info"
+        fields:
+          - label: "معلومات الموقع"
+            name: "site"
+            widget: "object"
+            fields:
+              - {label: "عنوان الموقع", name: "title", widget: "string", default: "سطحة هيدروليك"}
+              - {label: "العنوان الفرعي", name: "subtitle", widget: "text", default: "خدمات نقل ورفع السيارات بأحدث التقنيات الهيدروليكية"}
+              - {label: "وصف الموقع", name: "description", widget: "text"}
+              - {label: "رقم الهاتف", name: "phone", widget: "string", pattern: ["^\\+966[0-9]{9}$", "يجب أن يكون رقم سعودي صحيح مثل +966501234567"]}
+              - {label: "رقم الواتساب", name: "whatsapp", widget: "string", pattern: ["^\\+966[0-9]{9}$", "يجب أن يكون رقم سعودي صحيح مثل +966501234567"]}
+              - {label: "ساعات العمل", name: "workingHours", widget: "string", default: "متاحون 24/7"}
+              - {label: "العنوان", name: "address", widget: "string", default: "المملكة العربية السعودية"}
+          
+          - label: "المميزات"
+            name: "features"
+            widget: "list"
+            min: 2
+            max: 6
+            fields:
+              - {label: "العنوان", name: "title", widget: "string"}
+              - {label: "الوصف", name: "description", widget: "string"}
+              - {label: "الأيقونة (إيموجي)", name: "icon", widget: "string", hint: "استخدم إيموجي واحد فقط"}
+          
+          - label: "الخدمات"
+            name: "services"
+            widget: "list"
+            min: 3
+            max: 10
+            fields:
+              - {label: "المعرف", name: "id", widget: "number"}
+              - {label: "عنوان الخدمة", name: "title", widget: "string"}
+              - {label: "وصف الخدمة", name: "description", widget: "text"}
+              - {label: "الأيقونة (إيموجي)", name: "icon", widget: "string", hint: "استخدم إيموجي واحد فقط"}
+              - {label: "فعال", name: "active", widget: "boolean", default: true}
+
+  - name: "pages"
+    label: "الصفحات"
+    files:
+      - file: "_data/privacy.md"
+        label: "سياسة الخصوصية"
+        name: "privacy"
+        fields:
+          - {label: "العنوان", name: "title", widget: "string", default: "سياسة الخصوصية"}
+          - {label: "المحتوى", name: "body", widget: "markdown"}
+          - {label: "تاريخ التحديث", name: "lastUpdated", widget: "date"}
+      
+      - file: "_data/terms.md"
+        label: "شروط الاستخدام"
+        name: "terms"
+        fields:
+          - {label: "العنوان", name: "title", widget: "string", default: "شروط الاستخدام"}
+          - {label: "المحتوى", name: "body", widget: "markdown"}
+          - {label: "تاريخ التحديث", name: "lastUpdated", widget: "date"}
+
+  - name: "settings"
+    label: "الإعدادات المتقدمة"
+    files:
+      - file: "_data/seo.yml"
+        label: "إعدادات SEO"
+        name: "seo"
+        fields:
+          - {label: "وصف الموقع للبحث", name: "metaDescription", widget: "text", required: false}
+          - {label: "الكلمات المفتاحية", name: "keywords", widget: "string", required: false}
+          - {label: "رابط الصورة الرئيسية", name: "ogImage", widget: "image", required: false}
+          - {label: "رابط تويتر", name: "twitterHandle", widget: "string", required: false}
+          - {label: "رمز Google Analytics", name: "googleAnalytics", widget: "string", required: false}

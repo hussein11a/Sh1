@@ -1,0 +1,235 @@
+/* Netlify CMS Preview Styles */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap');
+
+/* Base styles for preview */
+.frame-content {
+  font-family: 'Cairo', sans-serif !important;
+  direction: rtl !important;
+  text-align: right !important;
+  background: linear-gradient(135deg, #1e40af 0%, #1e293b 50%, #374151 100%);
+  color: white;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cairo', sans-serif;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  background: linear-gradient(135deg, white, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+p {
+  line-height: 1.8;
+  font-size: 16px;
+  color: #d1d5db;
+  margin-bottom: 1rem;
+}
+
+/* Service Preview */
+.service-preview {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  margin: 15px 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.service-preview:hover {
+  transform: translateY(-2px);
+  border-color: #f59e0b;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.service-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.service-description {
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+/* Feature Preview */
+.feature-preview {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 8px;
+  margin: 10px 0;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.feature-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.feature-description {
+  font-size: 0.875rem;
+  color: #cbd5e1;
+}
+
+/* Contact Preview */
+.contact-preview {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 20px 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.working-hours {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #f59e0b;
+  margin-bottom: 8px;
+}
+
+.address {
+  color: #d1d5db;
+  margin-bottom: 15px;
+}
+
+/* Button styles for preview */
+.btn-preview {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.btn-primary-preview {
+  background: #f59e0b;
+  color: white;
+}
+
+.btn-whatsapp-preview {
+  background: #25d366;
+  color: white;
+}
+
+/* Grid layouts for preview */
+.features-grid-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.services-grid-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+/* RTL specific adjustments */
+* {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+/* Number inputs should remain LTR */
+input[type="number"] {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Emoji and icons */
+.emoji {
+  font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+  font-size: inherit;
+}
+
+/* Status indicators */
+.active-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.inactive-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #ef4444;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+/* Preview container */
+.preview-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Responsive adjustments for preview */
+@media (max-width: 768px) {
+  .features-grid-preview {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .services-grid-preview {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .service-preview,
+  .contact-preview {
+    padding: 15px;
+  }
+}

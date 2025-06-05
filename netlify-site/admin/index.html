@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>إدارة المحتوى - سطحة هيدروليك</title>
+  <link rel="icon" href="/favicon.svg">
+  
+  <!-- Arabic Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  
+  <!-- RTL and Arabic Support Styles -->
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif !important;
+      direction: rtl !important;
+      text-align: right !important;
+    }
+    
+    /* Netlify CMS RTL Overrides */
+    .css-11unzgr,
+    [class*="TopBarContainer"],
+    [class*="SidebarContainer"],
+    [class*="MainContainer"],
+    [class*="EditorContainer"] {
+      direction: rtl !important;
+    }
+    
+    /* Form fields RTL */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    .DraftEditor-root,
+    .public-DraftEditor-content {
+      direction: rtl !important;
+      text-align: right !important;
+      font-family: 'Cairo', sans-serif !important;
+    }
+    
+    /* Numbers should remain LTR */
+    input[type="number"] {
+      direction: ltr !important;
+      text-align: left !important;
+    }
+    
+    /* Remove indicator separators */
+    .css-1x51dt5-indicatorSeparator,
+    .css-1okebmr-indicatorSeparator {
+      display: none;
+    }
+    
+    /* Custom theme colors */
+    :root {
+      --primary-color: #f59e0b;
+      --secondary-color: #1e40af;
+    }
+    
+    /* Security notice */
+    .security-notice {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: white;
+      padding: 12px;
+      text-align: center;
+      font-weight: bold;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      font-family: 'Cairo', sans-serif;
+    }
+    
+    /* Loading styles */
+    .loading-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #1e40af, #1e293b);
+      color: white;
+      font-family: 'Cairo', sans-serif;
+      direction: rtl;
+    }
+    
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 3px solid rgba(255,255,255,0.3);
+      border-top: 3px solid #f59e0b;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-left: 15px;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* Hide CMS until loaded */
+    #nc-root {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    
+    #nc-root.loaded {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Security Notice -->
+  <div class="security-notice">
+    🔒 منطقة آمنة - لوحة التحكم في محتوى موقع سطحة هيدروليك
+  </div>
+  
+  <!-- Loading Screen -->
+  <div id="loading" class="loading-container">
+    <div>
+      <h2>جاري تحميل لوحة التحكم...</h2>
+      <p>يتم تحضير واجهة إدارة المحتوى</p>
+    </div>
+    <div class="loading-spinner"></div>
+  </div>
+  
+  <!-- Netlify CMS -->
+  <div id="nc-root"></div>
+  
+  <!-- Netlify CMS Script -->
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  
+  <!-- Custom Scripts -->
+  <script>
+    // RTL Configuration for Netlify CMS
+    CMS.registerEventListener({
+      name: 'preSave',
+      handler: ({ entry }) => {
+        console.log('حفظ المحتوى:', entry.get('slug'));
+        return entry;
+      }
+    });
+
+    // Custom preview styles
+    CMS.registerPreviewStyle('/admin/preview.css');
+    
+    // Custom preview template for services (optional)
+    const ServicePreview = createClass({
+      render: function() {
+        const entry = this.props.entry;
+        const services = entry.getIn(['data', 'services']);
+        
+        return h('div', {
+          style: {
+            fontFamily: 'Cairo, sans-serif',
+            direction: 'rtl',
+            padding: '20px',
+            background: 'linear-gradient(135deg, #1e40af, #1e293b)',
+            color: 'white',
+            borderRadius: '8px'
+          }
+        },
+          h('h2', {style: {textAlign: 'center', marginBottom: '20px'}}, 'معاينة الخدمات'),
+          services && services.entrySeq().map(([index, service]) =>
+            h('div', {
+              key: index,
+              style: {
+                background: 'rgba(255,255,255,0.1)',
+                padding: '15px',
+                margin: '10px 0',
+                borderRadius: '8px',
+                border: '1px solid rgba(255,255,255,0.2)'
+              }
+            },
+              h('div', {style: {fontSize: '24px', marginBottom: '10px'}}, service.get('icon')),
+              h('h3', {style: {color: 'white', marginBottom: '8px'}}, service.get('title')),
+              h('p', {style: {color: '#d1d5db'}}, service.get('description'))
+            )
+          )
+        );
+      }
+    });
+
+    // Register preview template
+    CMS.registerPreviewTemplate('site-info', ServicePreview);
+    
+    // Hide loading screen when CMS is ready
+    CMS.registerEventListener({
+      name: 'login',
+      handler: () => {
+        setTimeout(() => {
+          const loading = document.getElementById('loading');
+          const cmsRoot = document.getElementById('nc-root');
+          
+          if (loading) loading.style.display = 'none';
+          if (cmsRoot) cmsRoot.classList.add('loaded');
+        }, 1000);
+      }
+    });
+    
+    // Console protection
+    (function() {
+      let devtools = false;
+      const threshold = 160;
+      
+      setInterval(function() {
+        if (window.outerHeight - window.innerHeight > threshold || 
+            window.outerWidth - window.innerWidth > threshold) {
+          if (!devtools) {
+            devtools = true;
+            console.clear();
+            console.log('%cتحذير أمني - لوحة التحكم!', 'color: red; font-size: 24px; font-weight: bold;');
+            console.log('%cأنت في منطقة آمنة. استخدم هذه الأدوات بحذر.', 'color: orange; font-size: 16px;');
+          }
+        } else {
+          devtools = false;
+        }
+      }, 500);
+    })();
+    
+    // Initial setup
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set RTL on body
+      document.body.setAttribute('dir', 'rtl');
+      
+      // Auto-hide loading after 5 seconds as fallback
+      setTimeout(() => {
+        const loading = document.getElementById('loading');
+        const cmsRoot = document.getElementById('nc-root');
+        
+        if (loading && loading.style.display !== 'none') {
+          loading.style.display = 'none';
+          if (cmsRoot) cmsRoot.classList.add('loaded');
+        }
+      }, 5000);
+    });
+  </script>
+</body>
+</html>
