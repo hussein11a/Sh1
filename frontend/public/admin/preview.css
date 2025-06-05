@@ -1,0 +1,52 @@
+/* Preview styles for Netlify CMS */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap');
+
+body {
+  font-family: 'Cairo', sans-serif !important;
+  direction: rtl;
+  background: linear-gradient(135deg, #1e293b, #1e40af, #1e293b);
+  color: white;
+}
+
+.frame-content {
+  direction: rtl;
+  text-align: right;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cairo', sans-serif;
+  color: white;
+}
+
+.service-preview {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.feature-preview {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 6px;
+  margin: 8px 0;
+  text-align: center;
+}
+
+/* Arabic typography */
+p, span, div {
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* RTL specific */
+* {
+  direction: rtl;
+  text-align: right;
+}
+
+input, textarea, select {
+  direction: rtl;
+  text-align: right;
+}

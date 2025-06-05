@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>إدارة المحتوى - سطحة هيدروليك</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif !important;
+      direction: rtl;
+    }
+    
+    [data-slate-editor] {
+      direction: rtl !important;
+      text-align: right !important;
+    }
+    
+    .css-1wa3eu0-placeholder {
+      direction: rtl !important;
+      text-align: right !important;
+    }
+    
+    /* Custom RTL styles for CMS */
+    .css-11unzgr {
+      direction: rtl;
+    }
+    
+    .css-1x51dt5-indicatorSeparator,
+    .css-1okebmr-indicatorSeparator {
+      display: none;
+    }
+    
+    /* Arabic number support */
+    input[type="number"] {
+      direction: ltr;
+      text-align: left;
+    }
+    
+    /* Security notice */
+    .security-notice {
+      background: #f59e0b;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+  <div class="security-notice">
+    منطقة آمنة - لوحة التحكم في المحتوى
+  </div>
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <script>
+    // RTL Configuration
+    CMS.registerEventListener({
+      name: 'preSave',
+      handler: ({ entry }) => {
+        console.log('Saving entry:', entry.get('slug'));
+        return entry;
+      }
+    });
+
+    // Custom preview styles
+    CMS.registerPreviewStyle('/admin/preview.css');
+    
+    // Console protection
+    (function() {
+      let devtools = false;
+      setInterval(function() {
+        if (devtools) {
+          window.location.reload();
+        }
+      }, 100);
+      
+      Object.defineProperty(window, 'devtools', {
+        get: function() {
+          devtools = true;
+          return false;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

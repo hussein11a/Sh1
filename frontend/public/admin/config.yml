@@ -1,0 +1,71 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+locale: 'ar'
+
+collections:
+  - name: "site"
+    label: "إعدادات الموقع"
+    files:
+      - file: "src/data/siteData.json"
+        label: "معلومات الموقع"
+        name: "site-info"
+        fields:
+          - label: "معلومات الموقع"
+            name: "site"
+            widget: "object"
+            fields:
+              - {label: "عنوان الموقع", name: "title", widget: "string"}
+              - {label: "العنوان الفرعي", name: "subtitle", widget: "text"}
+              - {label: "وصف الموقع", name: "description", widget: "text"}
+              - {label: "رقم الهاتف", name: "phone", widget: "string"}
+              - {label: "رقم الواتساب", name: "whatsapp", widget: "string"}
+              - {label: "ساعات العمل", name: "workingHours", widget: "string"}
+              - {label: "العنوان", name: "address", widget: "string"}
+          - label: "المميزات"
+            name: "features"
+            widget: "list"
+            fields:
+              - {label: "العنوان", name: "title", widget: "string"}
+              - {label: "الوصف", name: "description", widget: "string"}
+              - {label: "الأيقونة", name: "icon", widget: "string"}
+
+  - name: "services"
+    label: "الخدمات"
+    files:
+      - file: "src/data/services.json"
+        label: "قائمة الخدمات"
+        name: "services-list"
+        fields:
+          - label: "الخدمات"
+            name: "services"
+            widget: "list"
+            fields:
+              - {label: "المعرف", name: "id", widget: "number"}
+              - {label: "عنوان الخدمة", name: "title", widget: "string"}
+              - {label: "وصف الخدمة", name: "description", widget: "text"}
+              - {label: "الأيقونة", name: "icon", widget: "string"}
+              - {label: "فعال", name: "active", widget: "boolean", default: true}
+
+  - name: "pages"
+    label: "الصفحات"
+    files:
+      - file: "src/data/privacy.json"
+        label: "سياسة الخصوصية"
+        name: "privacy"
+        fields:
+          - {label: "العنوان", name: "title", widget: "string", default: "سياسة الخصوصية"}
+          - {label: "المحتوى", name: "content", widget: "markdown"}
+          - {label: "تاريخ التحديث", name: "lastUpdated", widget: "date"}
+      
+      - file: "src/data/terms.json"
+        label: "شروط الاستخدام"
+        name: "terms"
+        fields:
+          - {label: "العنوان", name: "title", widget: "string", default: "شروط الاستخدام"}
+          - {label: "المحتوى", name: "content", widget: "markdown"}
+          - {label: "تاريخ التحديث", name: "lastUpdated", widget: "date"}
