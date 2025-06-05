@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="truckGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="baseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="url(#baseGradient)" stroke="#1e293b" stroke-width="2"/>
+  
+  <!-- Truck bed -->
+  <rect x="25" y="45" width="40" height="15" fill="url(#truckGradient)" rx="2"/>
+  
+  <!-- Hydraulic platform base -->
+  <rect x="20" y="60" width="60" height="8" fill="url(#baseGradient)" rx="4"/>
+  
+  <!-- Wheels -->
+  <circle cx="30" cy="70" r="6" fill="#374151"/>
+  <circle cx="70" cy="70" r="6" fill="#374151"/>
+  
+  <!-- Wheel centers -->
+  <circle cx="30" cy="70" r="3" fill="#6b7280"/>
+  <circle cx="70" cy="70" r="3" fill="#6b7280"/>
+  
+  <!-- Hydraulic arms -->
+  <rect x="35" y="35" width="3" height="10" fill="#6b7280"/>
+  <rect x="45" y="30" width="3" height="15" fill="#6b7280"/>
+  <rect x="55" y="35" width="3" height="10" fill="#6b7280"/>
+  
+  <!-- Load/car representation -->
+  <rect x="40" y="25" width="20" height="8" fill="#ef4444" rx="2"/>
+  
+  <!-- Hydraulic symbol -->
+  <circle cx="50" cy="50" r="2" fill="#fbbf24"/>
+</svg>

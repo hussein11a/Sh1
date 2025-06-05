@@ -1,0 +1,35 @@
+{
+  "short_name": "سطحة هيدروليك",
+  "name": "سطحة هيدروليك - خدمات نقل ورفع السيارات",
+  "description": "خدمات احترافية لنقل السيارات والمركبات باستخدام أحدث المعدات الهيدروليكية",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#1e40af",
+  "background_color": "#1e293b",
+  "orientation": "portrait-primary",
+  "dir": "rtl",
+  "lang": "ar",
+  "scope": "/",
+  "categories": ["business", "utilities", "automotive"],
+  "prefer_related_applications": false
+}
