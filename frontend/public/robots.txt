@@ -1,0 +1,32 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /src/data/
+Disallow: /static/js/
+Disallow: /static/css/
+
+# Sitemap location
+Sitemap: /sitemap.xml
+
+# Crawl delay for polite crawling
+Crawl-delay: 1
+
+# Specific rules for search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Block aggressive crawlers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
