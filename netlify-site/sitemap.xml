@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Main page -->
+  <url>
+    <loc>https://hydraulic-platform.netlify.app/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hydraulic-platform.netlify.app/" />
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://hydraulic-platform.netlify.app/" />
+    <image:image>
+      <image:loc>https://hydraulic-platform.netlify.app/favicon.svg</image:loc>
+      <image:title>سطحة هيدروليك - شعار الشركة</image:title>
+      <image:caption>خدمات نقل ورفع السيارات بأحدث التقنيات الهيدروليكية</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Services section (as a fragment) -->
+  <url>
+    <loc>https://hydraulic-platform.netlify.app/#services</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hydraulic-platform.netlify.app/#services" />
+  </url>
+  
+  <!-- Contact section (as a fragment) -->
+  <url>
+    <loc>https://hydraulic-platform.netlify.app/#contact</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hydraulic-platform.netlify.app/#contact" />
+  </url>
+  
+  <!-- Privacy policy (when created) -->
+  <url>
+    <loc>https://hydraulic-platform.netlify.app/privacy</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hydraulic-platform.netlify.app/privacy" />
+  </url>
+  
+  <!-- Terms of service (when created) -->
+  <url>
+    <loc>https://hydraulic-platform.netlify.app/terms</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hydraulic-platform.netlify.app/terms" />
+  </url>
+
+</urlset>
